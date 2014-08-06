@@ -6,7 +6,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "sample-app.com"
 
   # Set the version of chef to install using the vagrant-omnibus plugin
-  config.omnibus.chef_version = :latest
+  config.omnibus.chef_version = '11.10.4'
+
+  config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--memory", 1024, "--cpus", "2"]
+  end
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "opscode_ubuntu-12.04_provisionerless"
