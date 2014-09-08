@@ -4,4 +4,4 @@
 site 'https://supermarket.getchef.com/api/v1'
 
 cookbook 'sample-app',
-  :git => 'https://github.com/XORangeJuice/chef-sample-app-cookbook'
+  :git => 'https://github.com/fearless-rails/sample-app-cookbook.git'
